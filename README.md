@@ -25,3 +25,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Summary
+The app consumes web api https://www.thecocktaildb.com. You can get a random cocktail as a drink for the day, with its ingredients, measures and instructions to prepare it. You can search drinks by their name, or by the letter you indicate.
