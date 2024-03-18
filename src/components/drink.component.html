@@ -1,0 +1,31 @@
+<div *ngIf="loading" class="text-center">
+    <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+<div *ngIf="!loading" class="drink-container">
+    <div>
+        <h1>Your drink of the day</h1>
+    </div>
+    <h2>{{ drink.name }}</h2>
+    <img src="{{ drink.urlImage }}" alt="{{ drink.name }}" class="drink-image">
+    <div class="instructions">
+        <h3>Instructions</h3>
+        <p>{{ drink.instructions }}</p>
+    </div>
+    <div class="ingredients">  
+        <h3>Ingredients and measures</h3>
+            <div *ngFor="let ingredient of drink.ingredients; let i = index">
+                <span>{{ ingredient }} </span>
+                <span>{{ drink.ingmeasures[i] }}</span>
+            </div>
+    </div>
+    <br/>
+    <div>
+        <h5>Search your favourite drink</h5>
+        <div class="input-group flex-nowrap">
+            <span class="input-group-text"><img src="./assets/search.svg" (click)="searchDrink()"></span>
+            <input type="text" placeholder="Type yor drink" [(ngModel)]="drinkName" name="text" required>
+        </div>
+    </div>
+</div>

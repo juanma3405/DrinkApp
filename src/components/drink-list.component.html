@@ -1,0 +1,12 @@
+<div *ngIf="drinks.length == 0">
+    <h2 class="txt-noresults">No tenemos el trago buscado en nuestra lista de cocktails</h2>
+</div>
+<div class="grid-container" *ngIf="drinks.length > 0"> 
+    <div *ngFor="let drink of drinks" class="grid-item">
+        <img (click)="viewDrink(drink)" [src]="drink.urlImage" alt="Drink">
+        <p>{{ drink.name }}</p>
+    </div>
+</div>
+<div>
+    <button class="btn-volver" (click)="volverAInicio()">Volver</button>
+</div>

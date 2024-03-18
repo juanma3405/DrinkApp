@@ -1,0 +1,19 @@
+<div class="drink-container">
+    <h2>{{ drink.name }}</h2>
+    <img src="{{ drink.urlImage }}" alt="{{ drink.name }}" class="drink-image">
+    <div class="instructions">
+        <h3>Instructions</h3>
+        <p>{{ drink.instructions }}</p>
+    </div>
+    <div class="ingredients">
+        <h3>Ingredients and measures</h3>
+        <div *ngFor="let ingredient of drink.ingredients; let i = index">
+            <span>{{ ingredient }} </span>
+            <span>{{ drink.ingmeasures[i] }}</span>
+        </div>
+    </div>
+    <br />
+    <div>
+        <button (click)="volverAInicio()">Volver</button>
+    </div>
+</div>
